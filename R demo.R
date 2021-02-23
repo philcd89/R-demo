@@ -178,6 +178,12 @@ ggplot(data = demoData_IB, aes(x = StepVel, y = StepLength, color = Group))+
   geom_point()+
   geom_smooth(method = "lm", aes(fill = Group), alpha = 0.2)
 
+#faceting
+ggplot(data = demoData_IB, aes(x = StepVel, y = StepLength, color = Group))+
+  facet_grid(Group~.)+
+  geom_point()+
+  geom_smooth(method = "lm", aes(fill = Group), alpha = 0.2)
+
 
 # Stats!!! ----------------------------------------------------------------
 
